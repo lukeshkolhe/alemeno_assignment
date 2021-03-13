@@ -2,7 +2,7 @@ import 'package:alemeno/Views/pricing.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class welcome extends StatelessWidget{
+class Welcome extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -12,15 +12,15 @@ class welcome extends StatelessWidget{
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          initial_text(),
-          inst_image(),
-          pricing_button(),
+          InitialText(),
+          InstImage(),
+          PricingButton(),
         ],
       ),
     );
   }
 }
-class initial_text extends StatelessWidget{
+class InitialText extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,7 +30,7 @@ class initial_text extends StatelessWidget{
   }
 }
 
-class inst_image extends StatelessWidget{
+class InstImage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -46,12 +46,12 @@ class inst_image extends StatelessWidget{
     );
   }
 }
-class pricing_button extends StatelessWidget{
+class PricingButton extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return TextButton(
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => pricing()));
+          Navigator.push(context, MaterialPageRoute(builder: (context) => Pricing()));
         },
         child: Text('Show Pricing', style: TextStyle(fontSize: 20, color: Colors.white),),
       style: ButtonStyle(

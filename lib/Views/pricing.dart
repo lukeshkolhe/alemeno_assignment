@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class pricing extends StatelessWidget{
+class Pricing extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: page(),
+      body: Page(),
     );
   }
 }
-class page extends StatelessWidget{
+class Page extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,17 +22,17 @@ class page extends StatelessWidget{
           // new Expanded(child: info()),
           // new Expanded(child: priceCards()),
           // new Expanded(child: proccedToPay()),
-          heading(),
-          title(),
-          info(),
-          priceCards(),
-          proccedToPay(),
+          Heading(),
+          Title(),
+          Info(),
+          PriceCards(),
+          ProccedToPay(),
         ],
       ),
     );
   }
 }
-class heading extends StatelessWidget{
+class Heading extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -58,14 +58,14 @@ class heading extends StatelessWidget{
   }
 }
 
-class title extends StatelessWidget{
+class Title extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Text('Pricing', style: TextStyle(color: Color(0xFF5F2EEA), fontSize: 20),);
   }
 }
 
-class info extends StatelessWidget{
+class Info extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Text('Go Premium to get more out of Alemeno', style: TextStyle(fontSize: 14),);
@@ -83,10 +83,10 @@ class Plan {
 }
 int planSelected =1;
 List <Plan> plans = [new Plan(false, 'Basic', basicBenefits, 'Monthly ₹499'), new Plan(true, 'Gold', goldBenefits, '3 Months ₹999')];
-class priceCards extends StatefulWidget{
-  priceCardState createState() => priceCardState();
+class PriceCards extends StatefulWidget{
+  PriceCardState createState() => PriceCardState();
 }
-class priceCardState extends State<priceCards>{
+class PriceCardState extends State<PriceCards>{
   benifits(List b){
     return ListView.builder(
       shrinkWrap: true,
@@ -169,7 +169,7 @@ class priceCardState extends State<priceCards>{
   }
 }
 
-class proccedToPay extends StatelessWidget{
+class ProccedToPay extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Row(

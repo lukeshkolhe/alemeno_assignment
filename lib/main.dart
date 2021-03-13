@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         backgroundColor: Color(0xFFFCFCFC),
-        body: welcome(),
+        body: Welcome(),
       ),
     );
   }
