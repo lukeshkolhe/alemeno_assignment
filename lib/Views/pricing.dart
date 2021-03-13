@@ -94,7 +94,7 @@ class priceCardState extends State<priceCards>{
         itemBuilder: (BuildContext context, int index) {
           return Row(
             children: [
-              Icon(Icons.fiber_manual_record_outlined, size: 8, color: Color(0xFFD6D8E7),),
+              Icon(Icons.circle, size: 4, color: Color(0xFFD6D8E7),),
               Text('  ' + b[index], style: TextStyle(fontSize: 12, color: Color(0xFF6E7191)),)
             ],
           );
@@ -126,7 +126,7 @@ class priceCardState extends State<priceCards>{
                     decoration: BoxDecoration(
                       color: Color(0xFFFCFCFC),
                       borderRadius: BorderRadius.circular(16),
-                      border: index == planSelected? Border.all(color: Color(0xFF5F2EEA), width: 2): null,
+                      border: index == planSelected? Border.all(color: Color(0xFF5F2EEA), width: 2): Border.all(color: Colors.white, width: 2),
                       boxShadow: index != planSelected?[
                         BoxShadow(
                           color: Color(0xFFEFF0F6),
@@ -147,12 +147,15 @@ class priceCardState extends State<priceCards>{
                             height: 150,
                             child: benifits(plans[index].benefits)
                         ),
-                        Row(
-                          children: [
-                            Icon(Icons.fiber_manual_record_outlined,color: Color(0xFFD6D8E7), size: 10,),
-                            Text('  ' + plans[index].price, style: TextStyle(color: index == planSelected? Color(0xFF5F2EEA): Colors.black),),
-                          ],
-                        ),
+                        Container(
+                          transform: Matrix4.translationValues(-4, 0, 0),
+                          child: Row(
+                            children: [
+                              Icon(Icons.fiber_manual_record_outlined,color: index == planSelected? Color(0xFF5F2EEA): Color(0xFFD6D8E7), size: 12,),
+                              Text('  ' + plans[index].price, style: TextStyle(color: index == planSelected? Color(0xFF5F2EEA): Colors.black),),
+                            ],
+                          ),
+                        )
                       ],
                     ),
                   ),
