@@ -6,6 +6,7 @@ class welcome extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.center,
       padding: EdgeInsets.only(top: 115, bottom: 120),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -32,7 +33,17 @@ class initial_text extends StatelessWidget{
 class inst_image extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Image(image: AssetImage('assets/images/animal.png'),);
+    return Container(
+      height: 298,
+      width: 298,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        image: DecorationImage(
+          image: AssetImage('assets/images/animal.gif'),
+          fit: BoxFit.fill
+        )
+      ),
+    );
   }
 }
 class pricing_button extends StatelessWidget{
